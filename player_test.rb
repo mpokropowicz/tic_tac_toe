@@ -16,4 +16,6 @@ class TestPlayer < Minitest::Test
 
 		assert_equal("X", player.marker)
 	end
+
+	def test
 end
