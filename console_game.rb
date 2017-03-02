@@ -56,7 +56,7 @@ class ConsoleGame
         wins.each do |winner|
 
         	result = winner.count(current_player.marker) == 3
-        	break if winner.count(current_player.marker) == 3
+        	break if result
         end
 
         result
