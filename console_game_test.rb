@@ -9,4 +9,11 @@ class TestConsoleGame < Minitest::Test
 
 		assert_equal("Welcome to Tic Tac Toe!", game.greet_text)
 	end
+
+	def test_board_array
+
+		game = ConsoleGame.new(["","","", "","","", "","",""])
+
+		assert_equal(["","","", "","","", "","",""], game.board)
+	end
 end
