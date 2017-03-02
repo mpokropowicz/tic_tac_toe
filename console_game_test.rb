@@ -5,7 +5,7 @@ class TestConsoleGame < Minitest::Test
 
 	def test_start_message
 
-		game = ConsoleGame.new()
+		game = ConsoleGame.new([""])
 
 		assert_equal("Welcome to Tic Tac Toe!", game.greet_text)
 	end
