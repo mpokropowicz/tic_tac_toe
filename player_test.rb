@@ -9,4 +9,11 @@ class TestPlayer < Minitest::Test
 
 		assert_equal("Max", player.name)
 	end
+
+	def test_marker
+
+		player = Player.new("Max", "X")
+
+		assert_equal("X", player.marker)
+	end
 end
