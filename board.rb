@@ -1,6 +1,7 @@
 class Board
 
-	attr_accessor :board 
+	attr_accessor :board
+	attr_reader :width, :height 
 
 	def initialize(width, height)
 
@@ -13,7 +14,7 @@ class Board
 
 	def make_board
 
-		@board = Array.new(@board_size, "")
+		@board = Array.new(@board_size, "a")
 	end
 
 	def is_position_occupied?(index)
@@ -39,5 +40,4 @@ end
 
 board = Board.new(3,3)
 
-print board
-
+board.board = ["","","", "","","", "","",""]
