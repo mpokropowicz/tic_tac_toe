@@ -2,8 +2,8 @@ require_relative "player.rb"
 
 class RandomPlayer < Player
 
-	def rand_position(board_size)
+	def move_pos
 
-		rand(board_size + 1)
+		rand(9)
 	end
 end

@@ -9,4 +9,8 @@ class Player
 		@marker = marker
 	end
 	
+	def to_s
+
+		name
+	end
 end
