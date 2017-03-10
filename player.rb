@@ -7,8 +7,13 @@ class Player
 
 		@name = name
 		@marker = marker
+		@seq_index = -1
 	end
 	
+	def move_pos(board)
+
+	end
+
 	def to_s
 
 		name
