@@ -118,8 +118,10 @@ class UnbeatablePlayer < Player
 
 		[0,2,6,8].each do |index|
 
-			move = index if board.board[index] == "_"
-			break
+			if board.board[index] == "_"
+				move = index 
+				break
+			end
 		end
 
 		move
@@ -131,8 +133,10 @@ class UnbeatablePlayer < Player
 
 		[1,3,5,7].each do |index|
 
-			move = index if board.board[index] = "_"
-			break
+			if board.board[index] = "_"
+				move = index 
+				break
+			end
 		end
 
 		move

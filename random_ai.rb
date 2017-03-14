@@ -2,8 +2,10 @@ require_relative "player.rb"
 
 class RandomPlayer < Player
 
-	def move_pos
+	def move_pos(board)
 
-		rand(9)
+		
+		available_places = board.board.each_index.select{|i| board.board[i] == '_'}
+		available_places[rand(available_places.length) - 1]
 	end
 end

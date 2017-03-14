@@ -5,13 +5,13 @@ class ConsoleGame
 
 	attr_accessor :board, :current_player, :p1, :p2
 
-	def initialize(p1, p2)
+	def initialize(p1, p2, w, h)
 
 		@p1 = p1
 		@p2 = p2
 		@current_player = @p2
 
-		@board = Board.new(3,3)
+		@board = Board.new(w,h)
 	end
 
 	def greet_text
@@ -64,7 +64,7 @@ class ConsoleGame
 
         wins.each do |winner|
 
-        	result = winner.count(current_player.marker) == 3
+        	result = winner.count(current_player.marker) == @board.height
         	break if result
         end
 
