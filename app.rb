@@ -6,5 +6,5 @@ require_relative "human.rb"
 
 get "/" do 
 
-	"oi"
+	erb :start
 end
