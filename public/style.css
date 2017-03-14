@@ -1,3 +1,24 @@
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.selection-bttns {
+    padding: 1em;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.selection-header {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -5,11 +26,13 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: auto;
 }
 
 .dropdown-content {
