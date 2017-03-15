@@ -14,9 +14,7 @@ get "/game" do
 	p1 = params[:p1] + "1"
 	p2 = params[:p2] + "2"
 
-	"#{p1}"
+	game = WebGame.new(p1, p2, 3, 3)
 
-	# game = WebGame.new(p1, p2, 3, 3)
-
-	# "#{game.p1}, #{game.p2}"
+	"#{game.p1}, #{game.p2}"
 end
