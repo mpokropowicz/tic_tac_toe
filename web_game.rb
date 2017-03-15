@@ -22,13 +22,13 @@ class WebGame < ConsoleGame
 
 		case player
 
-			when "human1" || "human2"
+			when "human1", "human2"
 				p = HumanPlayer.new(name, marker)
-			when "easy1" || "easy2"
+			when "easy1", "easy2"
 				p = SequentialPlayer.new(name, marker)
-			when "medium1" || "medium2"
+			when "medium1", "medium2"
 				p = Random_Player.new(name, marker)
-			when "hard1" || "hard2"
+			when "hard1", "hard2"
 				p = UnbeatablePlayer.new(name, marker)
 		end
 
