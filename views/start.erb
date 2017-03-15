@@ -7,9 +7,9 @@
     </div>
     <form type="post" action="test">
       <button id="human" value="human" onclick="getHuman()">Human</button>
-      <button>Easy Computer</button>
-      <button>Medium Computer</button>
-      <button>Hard Computer</button>
+      <button id="easy" value="easy" onclick="getEasy()">Easy Computer</button>
+      <button id="medium" value="medium" onclick="getMedium()">Medium Computer</button>
+      <button id="hard" value="hard" onclick="getHard()">Hard Computer</button>
       <input type="hidden" id="p1" name="p1" value="oi">
     </form>
   </div>
@@ -32,5 +32,17 @@
   function getHuman()
   {
     document.getElementById("p1").value = document.getElementById("human").value;
+  }
+  function getEasy()
+  {
+    document.getElementById("p1").value = document.getElementById("easy").value;
+  }
+  function getMedium()
+  {
+    document.getElementById("p1").value = document.getElementById("medium").value;
+  }
+  function getHard()
+  {
+    document.getElementById("p1").value = document.getElementById("hard").value;
   }
 </script>
