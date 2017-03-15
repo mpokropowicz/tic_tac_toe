@@ -93,7 +93,7 @@ body {
 .submit-field {
   position: fixed;
   top: 60%;
-  margin-left: 50%;
+  margin-left: 47.8%;
   margin-right: -50%;
   text-align: center;
 }
@@ -107,7 +107,7 @@ input[type="submit"]:hover {
 .vs {
   position: fixed;
   top: 45%;
-  margin-left: 50%;
+  margin-left: 48.3%;
   margin-right: -50%;
   font-size: 3rem;
   text-transform: uppercase;
