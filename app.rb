@@ -9,17 +9,10 @@ get "/" do
 	erb :start
 end
 
-get "/p1" do 
+get "/game" do 
 
-	test = params[:p1]
+	text1 = params[:p1]
+	text2 = params[:p2]
 
-	"#{test}"
-end
-
-
-get "/p2" do 
-
-	test = params[:p2]
-
-	"#{test}"
+	"#{text1}   #{text2}"
 end

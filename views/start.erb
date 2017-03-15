@@ -5,28 +5,27 @@
       <p>Select</p>
       <p class="big">Player 1</p>
     </div>
-    <form type="post" action="p1">
       <button id="human" value="human" onclick="getHuman()">Human</button>
       <button id="easy" value="easy" onclick="getEasy()">Easy Computer</button>
       <button id="medium" value="medium" onclick="getMedium()">Medium Computer</button>
       <button id="hard" value="hard" onclick="getHard()">Hard Computer</button>
-      <input type="hidden" id="p1" name="p1" value="oi">
-    </form>
   </div>
   <div class="right"><img src="http://bit.ly/bcr-dev"/>
     <div class="text-content">
       <p>Select</p>
       <p class="big">Player 2</p>
     </div>
-    <form type="post" action="p2">
       <button id="human2" value="human" onclick="getHuman2()">Human</button>
       <button id="easy2" value="easy" onclick="getEasy2()">Easy Computer</button>
       <button id="medium2" value="medium" onclick="getMedium2()">Medium Computer</button>
       <button id="hard2" value="hard" onclick="getHard2()">Hard Computer</button>
-      <input type="hidden" id="p2" name="p2" value="oi">
-    </form>
   </div>
   <div class="vs">VS</div>
+  <form type="post" action="game">
+    <input type="hidden" id="p1" name="p1" value="oi">
+    <input type="hidden" id="p2" name="p2" value="oi">
+    <input type="submit">
+  </form>
 </section>
 
 <script>
