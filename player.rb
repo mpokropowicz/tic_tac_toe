@@ -16,6 +16,6 @@ class Player
 
 	def to_s
 
-		name
+		"#{name}, #{marker} "
 	end
 end
