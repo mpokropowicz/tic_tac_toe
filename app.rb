@@ -45,5 +45,6 @@ end
 
 get "/winner" do
 
-	"you won"
+	"tie" if session[:game].board.all_spots_occupied?
+	"you won" if session[:game].winner?
 end

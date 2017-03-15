@@ -16,13 +16,13 @@ body {
   }
 }
 .left {
-  background-image: url(http://bit.ly/BCR-design-photo2);
+  background-image: url(images/left.png);
   background-size: cover;
   background-position: center;
 }
 
 .right {
-  background-image: url(http://bit.ly/BCR-dev-photo);
+  background-image: url(images/right.png);
   background-size: cover;
   background-position: center;
 }
@@ -91,6 +91,21 @@ body {
   transition: all 200ms;
 }
 
+.square{
+    width:100px;
+    height:100px;
+    text-align: center;
+}
+
+.v{
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+}
+
+.h{
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
 /*.submit:focus {
 
   transform: translateY(-1000px);
