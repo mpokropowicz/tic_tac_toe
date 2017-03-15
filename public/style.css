@@ -91,6 +91,11 @@ body {
   transition: all 200ms;
 }
 
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+}
 .square{
     width:100px;
     height:100px;
@@ -119,7 +124,13 @@ body {
   text-align: center;
 }
 
-input[type="submit"]:hover {
+.ttt {
+  background: white;
+  font-size: 30px; 
+  border: none;
+}
+
+.submit:hover {
   color: blue;
   cursor: pointer;
   background-color: white;
