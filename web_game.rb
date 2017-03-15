@@ -27,7 +27,7 @@ class WebGame < ConsoleGame
 			when "easy1", "easy2"
 				p = SequentialPlayer.new(name, marker)
 			when "medium1", "medium2"
-				p = Random_Player.new(name, marker)
+				p = RandomPlayer.new(name, marker)
 			when "hard1", "hard2"
 				p = UnbeatablePlayer.new(name, marker)
 		end

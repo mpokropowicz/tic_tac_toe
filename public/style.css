@@ -91,6 +91,11 @@ body {
   transition: all 200ms;
 }
 
+/*.submit:focus {
+
+  transform: translateY(-1000px);
+}*/
+
 .submit-field {
   position: fixed;
   top: 60%;
