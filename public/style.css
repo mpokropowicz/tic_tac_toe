@@ -57,6 +57,7 @@ body {
   border: 1px solid white;
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 30px;
   text-transform: uppercase;
   color: white;
   -webkit-transition: all 200ms;
@@ -104,6 +105,14 @@ input[type="submit"]:hover {
   background-color: white;
 }
 
+.title {
+  position: fixed;
+  top: 30%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
 .vs {
   position: fixed;
   top: 45%;
