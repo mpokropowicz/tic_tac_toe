@@ -96,6 +96,7 @@ table.center {
   margin-right: auto;
   padding-top: 3rem;
 }
+
 .square{
     width:100px;
     height:100px;
@@ -103,13 +104,21 @@ table.center {
 }
 
 .v{
-    border-left:1px solid #000;
-    border-right:1px solid #000;
+    border-left:3px solid #000;
+    border-right:3px solid #000;
 }
 
 .h{
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
+    border-top:3px solid #000;
+    border-bottom:3px solid #000;
+}
+
+input[value="X"] {
+  color: red;
+}
+
+input[value="O"] {
+  color: blue;
 }
 /*.submit:focus {
 
@@ -123,9 +132,11 @@ table.center {
   margin-right: -50%;
   text-align: center;
 }
-
+/*.game {
+  background-color: #ffcc99
+}*/
 .ttt {
-  background: white;
+  background: rgba(0,0,0,0);
   font-size: 30px; 
   border: none;
 }

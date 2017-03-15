@@ -1,24 +1,33 @@
 <link rel="stylesheet" href="style.css">
-<form action = "p2">
-<table class="center">
-  <tr>
-    <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0]%>></td>
-    <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[1]%>></td> 
-    <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[2]%>></td>
-  </tr>
-  <tr>
-    <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[3]%>></td>
-    <td class="square v h"><input class="ttt" type="submit" value=<%= session[:game].board.board[4]%>></td> 
-    <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[5]%>></td>
-  </tr>
-  <tr>
-    <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[6]%>></td>
-    <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[7]%>></td> 
-    <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[8]%>></td>
-  </tr>
-</table>
-</form>
-
+<section class="split-pane">
+  <div class=left>
+    <form action = "p2">
+      <table class="center">
+        <tr>
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0]%>></td>
+          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[1]%>></td> 
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[2]%>></td>
+        </tr>
+        <tr>
+          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[3]%>></td>
+          <td class="square v h"><input class="ttt" type="submit" value=<%= session[:game].board.board[4]%>></td> 
+          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[5]%>></td>
+        </tr>
+        <tr>
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[6]%>></td>
+          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[7]%>></td> 
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[8]%>></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div class=right>
+    <form action="p2"> 
+      <input type="submit" value="Next Turn" class="submit">
+    </form>
+  </div>
+</section>
+<!-- </form>
 <form action="p2">
 <input type="text" name="p1move">
-</form>
+</form> -->
