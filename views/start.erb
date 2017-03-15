@@ -20,14 +20,15 @@
       <button id="medium2" value="medium" onclick="getMedium2()">Medium Computer</button>
       <button id="hard2" value="hard" onclick="getHard2()">Hard Computer</button>
   </div>
-  <div class="vs">VS</div>
-  <form type="post" action="game">
-    <input type="hidden" id="p1" name="p1" value="oi">
-    <input type="hidden" id="p2" name="p2" value="oi">
-    <input type="submit">
-  </form>
 </section>
-
+<div class="vs">VS</div>
+  <div class="submit-field">
+    <form type="post" action="game">
+      <input type="hidden" id="p1" name="p1" value="oi">
+      <input type="hidden" id="p2" name="p2" value="oi">
+      <input type="submit" class="submit">
+    </form>
+  </div>
 <script>
   function getHuman()
   {

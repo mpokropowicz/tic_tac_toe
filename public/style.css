@@ -78,6 +78,32 @@ body {
     height: 100vh;
   }
 }
+
+.submit {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.submit-field {
+  position: fixed;
+  top: 60%;
+  margin-left: 50%;
+  margin-right: -50%;
+  text-align: center;
+}
+
+input[type="submit"]:hover {
+  color: blue;
+  cursor: pointer;
+  background-color: white;
+}
+
 .vs {
   position: fixed;
   top: 45%;
