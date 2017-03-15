@@ -5,7 +5,7 @@
       <p>Select</p>
       <p class="big">Player 1</p>
     </div>
-    <form type="post" action="test">
+    <form type="post" action="p1">
       <button id="human" value="human" onclick="getHuman()">Human</button>
       <button id="easy" value="easy" onclick="getEasy()">Easy Computer</button>
       <button id="medium" value="medium" onclick="getMedium()">Medium Computer</button>
@@ -18,31 +18,50 @@
       <p>Select</p>
       <p class="big">Player 2</p>
     </div>
-    <form>
-      <button>Human</button>
-      <button>Easy Computer</button>
-      <button>Medium Computer</button>
-      <button>Hard Computer</button>
+    <form type="post" action="p2">
+      <button id="human2" value="human" onclick="getHuman2()">Human</button>
+      <button id="easy2" value="easy" onclick="getEasy2()">Easy Computer</button>
+      <button id="medium2" value="medium" onclick="getMedium2()">Medium Computer</button>
+      <button id="hard2" value="hard" onclick="getHard2()">Hard Computer</button>
+      <input type="hidden" id="p2" name="p2" value="oi">
     </form>
   </div>
   <div class="vs">VS</div>
 </section>
 
 <script>
-  function getHuman()
+  function getHuman1()
   {
     document.getElementById("p1").value = document.getElementById("human").value;
   }
-  function getEasy()
+  function getEasy1()
   {
     document.getElementById("p1").value = document.getElementById("easy").value;
   }
-  function getMedium()
+  function getMedium1()
   {
     document.getElementById("p1").value = document.getElementById("medium").value;
   }
-  function getHard()
+  function getHard1()
   {
     document.getElementById("p1").value = document.getElementById("hard").value;
+  }
+
+  
+  function getHuman2()
+  {
+    document.getElementById("p2").value = document.getElementById("human2").value;
+  }
+  function getEasy2()
+  {
+    document.getElementById("p2").value = document.getElementById("easy2").value;
+  }
+  function getMedium2()
+  {
+    document.getElementById("p2").value = document.getElementById("medium2").value;
+  }
+  function getHard2()
+  {
+    document.getElementById("p2").value = document.getElementById("hard2").value;
   }
 </script>

@@ -9,9 +9,17 @@ get "/" do
 	erb :start
 end
 
-get "/test" do 
+get "/p1" do 
 
 	test = params[:p1]
+
+	"#{test}"
+end
+
+
+get "/p2" do 
+
+	test = params[:p2]
 
 	"#{test}"
 end
