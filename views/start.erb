@@ -5,8 +5,12 @@
       <p>Select</p>
       <p class="big">Player 1</p>
     </div>
-    <form>
-      <button>Show me the design</button>
+    <form type="post" action="test">
+      <button id="human" value="human" onclick="getHuman()">Human</button>
+      <button>Easy Computer</button>
+      <button>Medium Computer</button>
+      <button>Hard Computer</button>
+      <input type="hidden" id="p1" name="p1" value="oi">
     </form>
   </div>
   <div class="right"><img src="http://bit.ly/bcr-dev"/>
@@ -15,8 +19,18 @@
       <p class="big">Player 2</p>
     </div>
     <form>
-      <button>Show me the code</button>
+      <button>Human</button>
+      <button>Easy Computer</button>
+      <button>Medium Computer</button>
+      <button>Hard Computer</button>
     </form>
   </div>
   <div class="vs">VS</div>
 </section>
+
+<script>
+  function getHuman()
+  {
+    document.getElementById("p1").value = document.getElementById("human").value;
+  }
+</script>

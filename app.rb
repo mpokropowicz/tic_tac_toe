@@ -8,3 +8,10 @@ get "/" do
 
 	erb :start
 end
+
+get "/test" do 
+
+	test = params[:p1]
+
+	"#{test}"
+end
