@@ -27,10 +27,7 @@ end
 get "/p1" do
 	session[:game].change_player
 
-	if session[:game].p1.class == HumanPlayer
-
-		redirect "/p1human"
-	end
+	redirect "/p1human" if session[:game].p1.class == HumanPlayer
 
 	move = session[:game].current_player.move_pos(session[:game].board)
 
@@ -59,10 +56,7 @@ end
 get "/p2" do
 	session[:game].change_player
 
-	if session[:game].p2.class == HumanPlayer
-
-		redirect "/p2human"
-	end
+	redirect "/p2human" if session[:game].p2.class == HumanPlayer
 
 	move = session[:game].current_player.move_pos(session[:game].board)
 	session[:game].make_move(move)
