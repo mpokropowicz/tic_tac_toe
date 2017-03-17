@@ -25,8 +25,8 @@
     <form action="p2">
       <input type="submit" value="Next Turn" class="submit">
     </form>
-    <form method="post" action="p1human">
-      <input type=<%= session[:p1human] %> name="p1humanmove">
+    <form method="post" action="p1human" <%= session[:p1human] %>>
+      <input type="text" name="p1humanmove">
     </form>
   </div>
 </section>
