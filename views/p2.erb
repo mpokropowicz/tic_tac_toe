@@ -47,9 +47,8 @@
     <form action="p1" <%= session[:p2human] == "text" ? "hidden " : "text" %>>
       <input type="submit" value="Next Turn" class="submit">
     </form>
-    <form method="post" action="p2human" <%= session[:p2human] %>>
-      <input type="text" name="p2humanmove" maxlength="1">
-      <input type="submit" value="Next Turn" class="submit">
-    </form>
+    <div class="text-content">
+      <p <%= session[:p2human] %>>Click on the board to make your move!</p>
+    </div>
   </div>
 </section>
