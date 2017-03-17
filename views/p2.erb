@@ -4,26 +4,26 @@
     <form action = "p1">
       <table class="center">
         <tr>
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0]%>></td>
-          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[1]%>></td> 
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[2]%>></td>
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
+          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
         </tr>
         <tr>
-          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[3]%>></td>
-          <td class="square v h"><input class="ttt" type="submit" value=<%= session[:game].board.board[4]%>></td> 
-          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[5]%>></td>
+          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
+          <td class="square v h"><input class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
+          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
         </tr>
         <tr>
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[6]%>></td>
-          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[7]%>></td> 
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[8]%>></td>
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
+          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
+          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
         </tr>
       </table>
     </form>
   </div>
   <div class=right>
     <div class="text-content">
-      <p>It's <%= session[:game].current_player.name %>'s turn!</p>
+      <p>It's <%= session[:game].current_player.name %>'s (<%= session[:game].current_player.marker %>) turn!</p>
     </div>
     <form action="p1" <%= session[:p2human] == "text" ? "hidden " : "text" %>>
       <input type="submit" value="Next Turn" class="submit">
