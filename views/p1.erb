@@ -22,7 +22,7 @@
     </form>
   </div>
   <div class=right>
-    <form action="p2">
+    <form action="p2" <%= session[:p1human] == "text" ? "hidden " : "text" %>>
       <input type="submit" value="Next Turn" class="submit">
     </form>
     <form method="post" action="p1human" <%= session[:p1human] %>>
