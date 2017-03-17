@@ -5,7 +5,7 @@ require_relative "human.rb"
 require_relative "unbeatable_ai.rb"
 
 
-p1 = RandomPlayer.new("Player1","X")
+p1 = HumanPlayer.new("Player1","X")
 #p2 = RandomPlayer.new("Player2", "O")
 p2 = UnbeatablePlayer.new("Player2", "O")
 #p2 = SequentialPlayer.new("Player2", "O")
