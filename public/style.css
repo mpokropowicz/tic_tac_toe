@@ -181,3 +181,23 @@ input[value="O"] {
   font-size: 3rem;
   text-transform: uppercase;
 }
+
+input[type="text"] {
+  width: 30px;
+  text-align: center;
+  font-size: 3rem;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  font-family: "proxima-bold";
+  color: white;
+}
+
+input[type="text"]:active {
+  width: 30px;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  border-bottom: 2px solid white;
+}

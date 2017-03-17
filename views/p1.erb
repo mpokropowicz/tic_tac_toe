@@ -22,15 +22,15 @@
     </form>
   </div>
   <div class=right>
+    <div class="text-content">
+      <p>It's <%= session[:game].current_player.name %>'s turn!</p>
+    </div>
     <form action="p2" <%= session[:p1human] == "text" ? "hidden " : "text" %>>
       <input type="submit" value="Next Turn" class="submit">
     </form>
     <form method="post" action="p1human" <%= session[:p1human] %>>
-      <input type="text" name="p1humanmove">
+      <input type="text" name="p1humanmove" maxlength="1">
+      <input type="submit" value="Next Turn" class="submit">
     </form>
   </div>
 </section>
-<!-- </form>
-<form action="p2">
-<input type="text" name="p1move">
-</form> -->
