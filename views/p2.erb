@@ -1,7 +1,26 @@
 <link rel="stylesheet" href="style.css">
 <section class="split-pane">
   <div class=left>
-    <form action = "p1">
+    <form method ="post" action = "p2human" <%= session[:p2human] %>>
+      <table class="center">
+        <tr>
+          <td class="square"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
+          <td class="square v"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
+          <td class="square"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
+        </tr>
+        <tr>
+          <td class="square h"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
+          <td class="square v h"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
+          <td class="square h"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
+        </tr>
+        <tr>
+          <td class="square"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
+          <td class="square v"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
+          <td class="square"><input name ="p2humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
+        </tr>
+      </table>
+    </form>
+    <form action="p1" <%= session[:p2human] == "text" ? "hidden " : "text" %>>
       <table class="center">
         <tr>
           <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
