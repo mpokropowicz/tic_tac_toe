@@ -51,11 +51,18 @@ post "/p1human" do
 	move = session[:game].current_player.move_pos_web(session[:game].board, params[:p1humanmove].to_i)
 	session[:game].make_move(move)
 
+	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
+
 	redirect "/p2"
 end
 
 get "/p2" do
 	session[:game].change_player
+
+	if session[:game].p2.class == HumanPlayer
+
+		redirect "/p2human"
+	end
 
 	move = session[:game].current_player.move_pos(session[:game].board)
 	session[:game].make_move(move)
@@ -63,6 +70,21 @@ get "/p2" do
 	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
 
 	erb :p2
+end
+
+get "/p2human" do
+
+	erb :p2
+end
+
+post "/p2human" do
+
+	move = session[:game].current_player.move_pos_web(session[:game].board, params[:p2humanmove].to_i)
+	session[:game].make_move(move)
+
+	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
+
+	redirect "/p1"
 end
 
 get "/winner" do
