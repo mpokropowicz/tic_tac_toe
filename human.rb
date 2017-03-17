@@ -8,4 +8,9 @@ class HumanPlayer < Player
 		puts "Please enter your position: "
 		move = gets.chomp.to_i
 	end
+
+	def move_pos_web(board,  move)
+
+		move
+	end
 end

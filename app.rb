@@ -18,18 +18,40 @@ get "/game" do
 
 	session[:game] = WebGame.new(session[:p1], session[:p2], 3, 3)
 
+	session[:p1human] = session[:game].p1.class == HumanPlayer ? "text" : "hidden"
+	session[:p2human] = session[:game].p2.class == HumanPlayer ? "text" : "hidden"
+
 	redirect "/p1"
 end
 
 get "/p1" do
 	session[:game].change_player
 
+	if session[:game].p1.class == HumanPlayer
+
+		redirect "/p1human"
+	end
+
 	move = session[:game].current_player.move_pos(session[:game].board)
+
 	session[:game].make_move(move)
 
 	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
 
 	erb :p1
+end
+
+get "/p1human" do
+
+	erb :p1
+end
+
+post "/p1human" do
+
+	move = session[:game].current_player.move_pos_web(session[:game].board, params[:p1humanmove].to_i)
+	session[:game].make_move(move)
+
+	redirect "/p2"
 end
 
 get "/p2" do
