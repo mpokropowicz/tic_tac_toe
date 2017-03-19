@@ -88,6 +88,7 @@ end
 
 get "/winner" do
 
-	"tie" if session[:game].board.all_spots_occupied?
-	"you won" if session[:game].winner?
+	result = session[:game].winner? ? "#{session[:game].current_player.name} has won!" : "It's a tie!"
+
+	erb :winner, :locals => {result: result}
 end
