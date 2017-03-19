@@ -25,6 +25,7 @@ get "/game" do
 end
 
 get "/p1" do
+
 	session[:game].change_player
 
 	redirect "/p1human" if session[:game].p1.class == HumanPlayer
@@ -34,6 +35,8 @@ get "/p1" do
 	session[:game].make_move(move)
 
 	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
+
+	redirect "p2" if session[:game].p2.class == HumanPlayer
 
 	erb :p1
 end
@@ -62,6 +65,8 @@ get "/p2" do
 	session[:game].make_move(move)
 
 	redirect "/winner" if session[:game].winner? || session[:game].board.all_spots_occupied?
+
+	redirect "p1" if session[:game].p1.class == HumanPlayer
 
 	erb :p2
 end
