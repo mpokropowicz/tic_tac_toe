@@ -3,48 +3,48 @@
   <meta charset="UTF-8">
 </head>
 <link rel="stylesheet" href="style.css">
-<section class="split-pane">
-  <div class=left>
+<!-- <section class="split-pane"> -->
+  <div class="left">
     <form method ="post" action = "p1human" <%= session[:p1human] %>>
       <table class="center">
         <tr>
-          <td class="square"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
-          <td class="square v"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
-          <td class="square"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
+          <td class="square v fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
         </tr>
         <tr>
-          <td class="square h"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
-          <td class="square v h"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
-          <td class="square h"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
+          <td class="square h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
+          <td class="square v h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
+          <td class="square h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
         </tr>
         <tr>
-          <td class="square"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
-          <td class="square v"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
-          <td class="square"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
+          <td class="square v fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
         </tr>
       </table>
     </form>
     <form action="p2" <%= session[:p1human] == "text" ? "hidden " : "text" %>>
       <table class="center">
         <tr>
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
-          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[0] == "_" ? "1" : session[:game].board.board[0]%>></td>
+          <td class="square v fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[1] == "_" ? "2" : session[:game].board.board[1]%>></td> 
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[2] == "_" ? "3" : session[:game].board.board[2]%>></td>
         </tr>
         <tr>
-          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
-          <td class="square v h"><input class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
-          <td class="square h"><input class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
+          <td class="square h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[3] == "_" ? "4" : session[:game].board.board[3]%>></td>
+          <td class="square v h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[4] == "_" ? "5" : session[:game].board.board[4]%>></td> 
+          <td class="square h fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[5] == "_" ? "6" : session[:game].board.board[5]%>></td>
         </tr>
         <tr>
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
-          <td class="square v"><input class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
-          <td class="square"><input class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[6] == "_" ? "7" : session[:game].board.board[6]%>></td>
+          <td class="square v fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[7] == "_" ? "8" : session[:game].board.board[7]%>></td> 
+          <td class="square fade"><input name ="p1humanmove" class="ttt" type="submit" value=<%= session[:game].board.board[8] == "_" ? "9" : session[:game].board.board[8]%>></td>
         </tr>
       </table>
     </form>
   </div>
-  <div class=right>
+  <!-- <div class=right>
     <div class="text-content">
       <p>It's <%= session[:game].current_player.name %>'s (<%= session[:game].current_player.marker %>) turn!</p>
     </div>
@@ -53,6 +53,6 @@
     </form>
     <div class="text-content">
       <p <%= session[:p1human] %>>Click on the board to make your move!</p>
-    </div>
+    </div> -->
   </div>
-</section>
+<!-- </section> -->
