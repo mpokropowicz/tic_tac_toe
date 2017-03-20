@@ -10,6 +10,6 @@ class SequentialPlayer < Player
 
 	def move_pos(board)
 
-		board.board.index("_")
+		board.board.index("")
 	end
 end

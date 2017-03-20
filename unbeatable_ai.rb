@@ -54,10 +54,10 @@ class UnbeatablePlayer < Player
 		
 		board_positions.each_with_index do |line, index|
 
-			if (line.count("X") == 2 && line.count("_") == 1) ||
-				(line.count("O") == 2 && line.count("_") == 1)
+			if (line.count("X") == 2 && line.count("") == 1) ||
+				(line.count("O") == 2 && line.count("") == 1)
 
-				move = indexs[index][line.index("_")]
+				move = indexs[index][line.index("")]
 			end
 		end
 
@@ -83,12 +83,12 @@ class UnbeatablePlayer < Player
 
 		board_positions.each_with_index do |line, index|
 
-			if (line.count(self.marker) == 1 && line.count("_") == 2)
+			if (line.count(self.marker) == 1 && line.count("") == 2)
 
-				move = indexs[index][line.index("_")]
-			elsif (line.count(opponent_marker) == 1 && line.count("_") == 2)\
+				move = indexs[index][line.index("")]
+			elsif (line.count(opponent_marker) == 1 && line.count("") == 2)\
 
-				move = indexs[index][line.index("_")]
+				move = indexs[index][line.index("")]
 			end
 		end
 
@@ -97,17 +97,17 @@ class UnbeatablePlayer < Player
 
 	def center(board)
 
-		move = 4 if board.board[4] == "_"
+		move = 4 if board.board[4] == ""
 	end
 
 	def opposite_corner(board)
 
 		move = -1
 
-		move = 8 if board.board[0] == opponent_marker && board.board[8] == "_"
-		move = 6 if board.board[2] == opponent_marker && board.board[6] == "_"
-		move = 2 if board.board[6] == opponent_marker && board.board[2] == "_"
-		move = 0 if board.board[8] == opponent_marker && board.board[0] == "_"
+		move = 8 if board.board[0] == opponent_marker && board.board[8] == ""
+		move = 6 if board.board[2] == opponent_marker && board.board[6] == ""
+		move = 2 if board.board[6] == opponent_marker && board.board[2] == ""
+		move = 0 if board.board[8] == opponent_marker && board.board[0] == ""
 
 		move
 	end
@@ -118,7 +118,7 @@ class UnbeatablePlayer < Player
 
 		[0,2,6,8].each do |index|
 
-			if board.board[index] == "_"
+			if board.board[index] == ""
 				move = index 
 				break
 			end
@@ -133,7 +133,7 @@ class UnbeatablePlayer < Player
 
 		[1,3,5,7].each do |index|
 
-			if board.board[index] = "_"
+			if board.board[index] = ""
 				move = index 
 				break
 			end

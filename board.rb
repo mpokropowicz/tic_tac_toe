@@ -9,17 +9,17 @@ class Board
 		@height = height
 		@board_size = width * height
 
-		@board = Array.new(@board_size, "_")
+		@board = Array.new(@board_size, "")
 	end
 
 	def is_position_occupied?(index)
 
-		@board[index] != "_"
+		@board[index] != ""
 	end
 
 	def all_spots_occupied?
 
-		@board.count("_") == 0
+		@board.count("") == 0
 	end
 
 	def set_position(index, value)
