@@ -95,11 +95,22 @@ table.center {
   padding-top: 3rem;
 }
 
-.board{
+.boardleft{
   height: 100vh;
   margin: 0;
   font-family: 'Lato', 'Arial', sans-serif;
-  background-color: #ffcc99;
+  background-image: url(images/left.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.boardright{
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', 'Arial', sans-serif;
+  background-image: url(images/right.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .square{
