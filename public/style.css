@@ -143,11 +143,13 @@ table.center {
 }
 
 button[value~="X"] {
-  color: red;
+  color: #760d0d;
+  -webkit-text-stroke: 2px #760d0d;
 }
 
 button[value~="O"] {
-  color: blue;
+  color: #0e0e73;
+  -webkit-text-stroke: 2px #0e0e73;
 }
 
 .submit-field {
