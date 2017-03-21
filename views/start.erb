@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <link rel="stylesheet" href="style.css">
-<section class="split-pane">
-  <div class="left"> <img src="images/player.png"/>
+<section id="pane" class="split-pane">
+  <div id="exam" class="left"> <img src="images/player.png"/>
     <div class="text-content">
       <p>Select</p>
       <p class="big">Player 1</p>
@@ -25,17 +26,29 @@
       <button id="hard2" value="hard" onclick="getHard2()">Hard Computer</button>
   </div>
 </section>
-<section>
-  <div class="vs">VS</div>
+<section id="exam" >
+  <div id="vs" class="vs">VS</div>
   <div class="submit-field">
-    <form type="post" action="game">
+    <form id="sub" type="post" action="game">
       <input type="hidden" id="p1" name="p1" value="">
       <input type="hidden" id="p2" name="p2" value="">
-      <input type="submit" class="submit" value="Let's go!">
+      <input id="moving" type="submit" class="submit" value="Let's go!">
     </form>
   </div>
 </section>
-
+<script>
+$('#moving').click(function(event){
+    event.preventDefault()
+    $("#vs").css("opacity", "0")
+    $("#moving").hide();
+    $("#exam").css("marginRight", "0").animate({marginRight: "+=1000"}, 1000);
+    $("#pane").css("opacity", "1").animate({opacity: "-=1"}, 1000);
+    $("#moving").delay(1200)
+    $("#moving").promise().done(function(){
+      $("#sub").submit();
+    });
+}); 
+</script>
 <script>
   function getHuman()
   {
