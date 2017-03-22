@@ -142,6 +142,10 @@ table.center {
   border: none;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 button[value~="X"] {
   color: #760d0d;
   -webkit-text-stroke: 2px #760d0d;

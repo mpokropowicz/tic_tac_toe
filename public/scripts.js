@@ -4,7 +4,7 @@ $(document).ready(function(){
     event.preventDefault()
     $("#vs").css("opacity", "0")
     $("#moving").hide();
-    $("#exam").css("marginRight", "0").animate({marginRight: "+=1000"}, 1000);
+    $("#exam").css("marginRight", "0").animate({marginRight: "+=500"}, 1000);
     $("#pane").css("opacity", "1").animate({opacity: "-=1"}, 1000);
     $("#moving").delay(1200)
     $("#moving").promise().done(function(){
