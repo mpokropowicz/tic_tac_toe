@@ -88,7 +88,9 @@ end
 
 get "/winner" do
 
-	result = session[:game].winner? ? "#{session[:game].current_player.name} has won!" : "It's a tie!"
+	result = session[:game].current_player.marker == "X" ? "boardleft" : "boardright"
 
-	erb :winner, :locals => {result: result}
+	winner = session[:game].winner? ? "#{session[:game].current_player.marker} has won the game!" : "It's a tie!"
+
+	erb :winner, :locals => {result: result, winner: winner}
 end

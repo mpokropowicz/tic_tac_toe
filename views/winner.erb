@@ -1,1 +1,31 @@
-<%= result %>
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+<div id="b" class="<%= result %>">
+  <table class="center">
+    <tr>
+      <td class="square fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[0]%>"><%=session[:game].board.board[0]%></button></td>
+      <td class="square v fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[1]%>"><%=session[:game].board.board[1]%></button></td>
+      <td class="square fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[2]%>"><%=session[:game].board.board[2]%></button></td>
+    </tr>
+    <tr>
+      <td class="square h fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[3]%>"><%=session[:game].board.board[3]%></button></td>
+      <td class="square v h fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[4]%>"><%=session[:game].board.board[4]%></button></td>
+      <td class="square h fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[5]%>"><%=session[:game].board.board[5]%></button></td>
+    </tr>
+    <tr>
+      <td class="square fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[6]%>"><%=session[:game].board.board[6]%></button></td>
+      <td class="square v fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[7]%>"><%=session[:game].board.board[7]%></button></td>
+      <td class="square fade"><button class="square tttbutton" value="1 <%=session[:game].board.board[8]%>"><%=session[:game].board.board[8]%></button></td>
+    </tr>
+  </table>
+  <div class="text-content">
+    <p><%= winner %></p>
+  </div>
+  <center><form action="/">
+      <input type="submit" class="submit" value="Play Again!">
+  </form></center>
+</div>
