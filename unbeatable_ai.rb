@@ -86,7 +86,7 @@ class UnbeatablePlayer < Player
 			if (line.count(self.marker) == 1 && line.count("") == 2)
 
 				move = indexs[index][line.index("")]
-			elsif (line.count(opponent_marker) == 1 && line.count("") == 2)\
+			elsif (line.count(opponent_marker) == 1 && line.count("") == 2)
 
 				move = indexs[index][line.index("")]
 			end

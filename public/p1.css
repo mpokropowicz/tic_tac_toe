@@ -1,0 +1,78 @@
+/*@import url("https://dl.dropboxusercontent.com/u/2821967/fonts/proxima-nova.css");*/
+html{
+  background-image: url(images/right.png);
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', 'Arial', sans-serif;;
+}
+
+@media (min-width: 850px) {
+  .split-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: relative;
+  }
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+}
+
+.boardleft{
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', 'Arial', sans-serif;
+  background-image: url("images/left.png");
+  background-size: cover;
+  background-position: center;
+  animation: fade;
+  animation-duration: 1s;
+}
+
+
+.square{
+    width:200px;
+    height:200px;
+    text-align: center;
+}
+
+.v{
+    border-left:5px solid #000;
+    border-right:5px solid #000;
+}
+
+.h{
+    border-top:5px solid #000;
+    border-bottom:5px solid #000;
+}
+
+.tttbutton{
+  background: rgba(0,0,0,0);
+  outline: none;
+  font-size: 50px; 
+  border: none;
+}
+
+button[value~="X"] {
+  color: #760d0d;
+  -webkit-text-stroke: 2px #760d0d;
+}
+
+button[value~="O"] {
+  color: #0e0e73;
+  -webkit-text-stroke: 2px #0e0e73;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
