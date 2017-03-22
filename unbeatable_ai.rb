@@ -8,12 +8,12 @@ class UnbeatablePlayer < Player
 		if win_or_block(board) >= 0
 			puts "win_or_block"
 			move = win_or_block(board)
-		elsif fork(board) >= 0
-			puts "fork"
-			move = fork(board)
 		elsif center(board) == 4
 			puts "center"
 			move = center(board)
+		elsif fork(board) >= 0
+			puts "fork"
+			move = fork(board)
 			
 		elsif opposite_corner(board) >= 0
 			puts "opposite_corner"
