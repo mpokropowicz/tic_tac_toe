@@ -1,7 +1,5 @@
 html{
-  background-image: url(images/left.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(images/right.png);
 }
 
 body {
@@ -58,9 +56,4 @@ button[value~="X"] {
 button[value~="O"] {
   color: #0e0e73;
   -webkit-text-stroke: 2px #0e0e73;
-}
-
-@keyframes fade {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
