@@ -58,7 +58,7 @@ post "/p1human" do
 end
 
 get "/p2" do
-	
+
 	session[:game].change_player
 
 	redirect "/p2human" if session[:game].p2.class == HumanPlayer
