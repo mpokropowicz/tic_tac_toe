@@ -40,6 +40,7 @@ class ConsoleGame
 	end
 
 	def make_move(index)
+    puts "#{index}"
 
 		if @board.is_position_occupied?(index) == false
 

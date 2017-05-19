@@ -14,7 +14,7 @@ class Board
 
 	def is_position_occupied?(index)
 
-		@board[index] != ""
+		board[index] != ""
 	end
 
 	def all_spots_occupied?
