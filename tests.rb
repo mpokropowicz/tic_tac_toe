@@ -127,9 +127,65 @@ class TestSeqPlayer < Minitest::Test
   end
 end
 
-class TestRandPlayer < Minitest::Test
+class TestUnbeatablePlayer < Minitest::Test
 
-  def test_move
+  def test_win
 
+    board = Board.new(3,3)
+
+    player = SequentialPlayer.new("Player 1", "X")
+
+    board.board[0] = "X"
+    board.board[1] = "X"
+
+    assert_equal(player.move_pos(board), 2)
+  end
+
+  def test_block_win
+
+    board = Board.new(3,3)
+
+    player = SequentialPlayer.new("Player 1", "X")
+
+    board.board[0] = "O"
+    board.board[1] = "O"
+
+    assert_equal(player.move_pos(board), 2)
+  end
+
+  def test_fork
+
+    board = Board.new(3,3)
+
+    player = SequentialPlayer.new("Player 1", "X")
+
+    board.board[6] = "X"
+    board.board[4] = "O"
+
+
+    assert_equal(player.move_pos(board), 0)
+  end
+
+  def test_block_fork
+
+    board = Board.new(3,3)
+
+    player = UnbeatablePlayer.new("Player 1", "X")
+
+    board.board[6] = "O"
+    board.board[4] = "X"
+    board.board[2] = "O"
+    board.board[8] = "X"
+
+    assert_equal(player.move_pos(board), 0)
+  end
+
+  def test_center
+
+    board = Board.new(3,3)
+
+    player = UnbeatablePlayer.new("Player 1", "X")
+
+    assert_equal(4, player.move_pos(board))
   end
 end
