@@ -38,12 +38,60 @@ class TestBoard < Minitest::Test
   def test_set_pos
 
     board = Board.new(3,3)
-    board.set_position(0, "X")
 
+    board.set_position(0, "X")
     assert_equal(board.board[0], "X")
 
     board.set_position(1, "O")
-
     assert_equal(board.board[1], "O")
+  end
+end
+
+class TestConsoleGame < Minitest::Test 
+
+  def test_change_player
+
+    p1 = HumanPlayer.new("Player1","X")
+    p2 = UnbeatablePlayer.new("Player2", "O")
+    game = ConsoleGame.new(p1, p2, 3, 3)
+
+    game.change_player
+    assert_equal(game.current_player, p1)
+
+    game.change_player
+    assert_equal(game.current_player, p2)
+  end
+
+  def test_make_move
+
+    p1 = HumanPlayer.new("Player1","X")
+    p2 = UnbeatablePlayer.new("Player2", "O")
+    game = ConsoleGame.new(p1, p2, 3, 3)
+
+    game.make_move(0)
+    assert_equal(game.board.board[0], "O")
+
+    game.change_player
+    game.make_move(1)
+    assert_equal(game.board.board[1], "X")
+
+    game.change_player
+    game.make_move(2)
+    assert_equal(game.board.board[2], "O")
+
+    assert_nil(game.make_move(2), nil)
+  end
+
+  def test_winner
+
+    p1 = HumanPlayer.new("Player1","X")
+    p2 = UnbeatablePlayer.new("Player2", "O")
+    game = ConsoleGame.new(p1, p2, 3, 3)
+
+    game.make_move(0)
+    game.make_move(1)
+    game.make_move(2)
+
+    assert_equal(game.winner?, true)
   end
 end
