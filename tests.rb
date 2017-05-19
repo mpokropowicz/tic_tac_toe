@@ -107,3 +107,29 @@ class TestWebGame < Minitest::Test
     assert_equal(UnbeatablePlayer.new("Player 2", "O").class, game.p2.class)
   end
 end
+
+class TestSeqPlayer < Minitest::Test
+
+  def test_move
+
+    board = Board.new(3,3)
+
+    player = SequentialPlayer.new("Player 1", "X")
+
+    board.board[0] = "O"
+    board.board[2] = "X"
+    board.board[5] = "X"
+
+    assert_equal(player.move_pos(board), 1)
+
+    board.board[1] = "O"
+    assert_equal(player.move_pos(board), 3)
+  end
+end
+
+class TestRandPlayer < Minitest::Test
+
+  def test_move
+
+  end
+end
