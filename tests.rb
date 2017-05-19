@@ -5,6 +5,7 @@ require_relative "sequential_ai.rb"
 require_relative "human.rb"
 require_relative "unbeatable_ai.rb"
 require_relative "board.rb"
+require_relative "web_game.rb"
 
 class TestBoard < Minitest::Test 
 
@@ -93,5 +94,16 @@ class TestConsoleGame < Minitest::Test
     game.make_move(2)
 
     assert_equal(game.winner?, true)
+  end
+end
+
+class TestWebGame < Minitest::Test
+
+  def test_make_player
+
+    game = WebGame.new("human1", "hard2", 3, 3)
+
+    assert_equal(HumanPlayer.new("Player 1", "X").class, game.p1.class)
+    assert_equal(UnbeatablePlayer.new("Player 2", "O").class, game.p2.class)
   end
 end
